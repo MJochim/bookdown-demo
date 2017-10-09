@@ -12,6 +12,14 @@ github-repo: rstudio/bookdown-demo
 description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
 ---
 
+# Problem
+
+When I insert R code using backticks, but *inside an HTML comment block*, the code is executed upon building:
+
+I expect the following to be executed and show 2: `r 1+1`
+
+(Open the HTML source to see what I mean) I would never expect this to be executed. Inside, the comment, I expect to see a code literal (1+1) instead of the code’s result (2). <!-- `r 1+1` -->
+
 # Prerequisites
 
 This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
